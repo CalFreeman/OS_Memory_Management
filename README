@@ -1,0 +1,42 @@
+READ DESIGN DECISIONS & ISSUES
+Caleb Freeman
+CS4760 - Operating Systems
+Instructor: Dr. Hauschild
+Assignment #5 - Memory Management
+
+1-CONTENTS
+----------
+oss.c           - source code
+user.c          - child processes source code
+.git/           - git Repository
+Makefile        - makefile
+README          - this file
+
+2-WORKS CITED
+----------
+
+
+3-COMMAND LINE ARGUMENTS
+----------
+Usage: ./oss
+default settings: N/A
+
+4-CODE COMPILATION:
+---------
+In my computer I am able to run the make file an execute with ./oss
+example:
+>make
+>./oss
+
+5-DESIGN DECISIONS & ISSUES
+--------
+running out of time so submitting. =(
+Major Issues: having issues with safe termination, and msgsnd and msgrcv.
+--crashes from floating point error, these happens when its broken and writes a massive logfile of pagetable
+--crashes when sends interrupt signal during msgsnd. (must use ctrl-c) to escape. (paging should work during these and produce and approprite logfile.dat)
+--works half the time to fix and rerun after these in attempt to get a readable logfile
+---remove logFile.dat
+---make clean
+---rerun program
+--paging is using FIFO algo until i can fix these other issues. paging FIFO works, but I am having issues with the msgsnd and msgrcv sending and receiving information for the frame table. process and pageNumber specifically.
+--SUBMITTING with a copy of a somewhat working logFile, it shows the paging working. but process and pagenumber are not being assigned to their page index correctly.
